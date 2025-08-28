@@ -4,17 +4,15 @@
     <meta charset="utf-8">
     <title>Redirecting...</title>
     <script type="text/javascript">
-      // Single Page Apps for GitHub Pages
-      // https://github.com/rafrex/spa-github-pages
-      // This script will check for the URL path and redirect to the index.html with the path in the query string
-      (function(){
-        var path = window.location.pathname;
-        var pathParts = path.split('/');
-        var fileName = pathParts[pathParts.length - 1];
-        if (fileName.indexOf('.') === -1) {
-          window.location.replace(window.location.origin + window.location.pathname.replace(path, '/twinstars/index.html') + window.location.search);
-        }
-      })();
+      // Get the repository name from the URL
+      var repoName = '/twinstars';
+      var path = window.location.pathname;
+      var redirectPath = repoName + '/index.html';
+
+      // Check if the path needs a redirect
+      if (path !== repoName + '/') {
+        window.location.replace(window.location.origin + redirectPath + window.location.search);
+      }
     </script>
   </head>
   <body>
